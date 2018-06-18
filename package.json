@@ -1,0 +1,23 @@
+{
+  "name": "registration-api",
+  "version": "1.0.0",
+  "description": "sample registration api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartgauravrana/registration-api.git"
+  },
+  "keywords": [
+    "registration",
+    "api"
+  ],
+  "author": "Gaurav Rana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smartgauravrana/registration-api/issues"
+  },
+  "homepage": "https://github.com/smartgauravrana/registration-api#readme"
+}
