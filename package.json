@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/smartgauravrana/registration-api/issues"
   },
-  "homepage": "https://github.com/smartgauravrana/registration-api#readme"
+  "homepage": "https://github.com/smartgauravrana/registration-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
 }
