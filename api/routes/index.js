@@ -13,6 +13,10 @@ router
 .post(ctrlAuth.register);
 
 router
+.route('/logout')
+.get(ctrlAuth.authenticate, ctrlAuth.logout);
+
+router
 .route('/records')
 .get(ctrlAuth.authenticate, ctrlRecord.getRecords);
 
