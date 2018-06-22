@@ -7,5 +7,5 @@ Routes are:-
 4. /api/records (GET) 
 
 NOTE - Set the TOKEN in request header
-Example - Authorization: Bearer xxx
+Example - [ Authorization: Bearer xxx] 
 here, xxx => TOKEN
