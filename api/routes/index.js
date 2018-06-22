@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+const ctrlRecord = require('../controllers/records.controller');
 const ctrlAuth = require('../controllers/auth.controller'); 
 
 router
@@ -10,5 +11,9 @@ router
 router
 .route('/register')
 .post(ctrlAuth.register);
+
+router
+.route('/records')
+.get(ctrlAuth.authenticate, ctrlRecord.getRecords);
 
 module.exports = router;

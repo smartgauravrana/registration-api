@@ -26,11 +26,36 @@ module.exports.register = (req, res) => {
 };
 
 module.exports.login = (req, res) => {
-    console.log('Login the user');
-    console.log(req.body);
-    res
-    .status(200)
-    .json(req.body);
+    console.log('Logging in user');
+    
+    let username = req.body.username;
+    let password = req.body.password;
+
+    User.findOne({
+        username: username
+    }).exec((err, user) => {
+        if(err) {
+            console.log(err);
+            res.status(400).json(err);
+        } else if (user) {
+            
+            if (bcrypt.compareSync(password, user.password)) {
+                console.log('User found', user);
+                let token = jwt.sign({ username: user.username}, 's3cr3t', { expiresIn: 3600});
+                res.status(200).json({
+                    success: true,
+                    token: token
+                });
+            } else{
+                res.status(401).json('Unauthorized');
+            }
+        } else {
+            res.status(200).json({
+                success: false,
+                message: 'User not exist'
+            });
+        }
+    });
 
 };
 
