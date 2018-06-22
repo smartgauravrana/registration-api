@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/smartgauravrana/registration-api#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.1.6"
   }
 }

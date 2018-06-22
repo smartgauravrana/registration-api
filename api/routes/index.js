@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const ctrlReg = require('../controllers/regCtrl'); 
+const ctrlAuth = require('../controllers/auth.controller'); 
 
 router
 .route('/login')
-.post(ctrlReg.login);
+.post(ctrlAuth.login);
 
 router
 .route('/register')
-.post(ctrlReg.register);
+.post(ctrlAuth.register);
 
 module.exports = router;
